@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bluey's Number Guessing Game</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🐾 Bluey's Guessing Game 🐾</h1>
+    <p class="instructions">
+      I'm thinking of a number from <strong>1 to 100</strong>.
+      Can you guess it in <strong>5 tries</strong>?
+    </p>
+
+    <form id="guess-form" novalidate>
+      <label for="guess-input">Your guess:</label>
+      <input id="guess-input" type="number" min="1" max="100" step="1" inputmode="numeric" autocomplete="off">
+      <button type="submit" id="guess-button">Guess!</button>
+    </form>
+
+    <p id="feedback" class="feedback" aria-live="polite">Type a number and press Guess!</p>
+    <p class="guesses-left">Guesses left: <span id="guesses-left">5</span></p>
+  </main>
+
+  <dialog id="result-dialog" aria-labelledby="result-title" aria-describedby="result-message">
+    <h2 id="result-title"></h2>
+    <p id="result-message"></p>
+    <button type="button" id="close-dialog">Play again</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
