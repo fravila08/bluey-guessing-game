@@ -1,5 +1,7 @@
 # Bluey's Number Guessing Game
 
+I made a change
+
 A single-player browser game. The computer picks a secret whole number from 1 to 100. You have 5 guesses, and after each one you're told whether it was too high, too low or correct. A pop-up announces a win or loss (and reveals the number on a loss), and closing it starts a new game. Themed after Bluey.
 
 The game rules come from `../CLAUDE.md`.
