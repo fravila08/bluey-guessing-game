@@ -24,7 +24,7 @@ The app lives in `project/`:
 
 To run it, open `project/index.html` in a browser, or serve the `project/` folder with a static server (for example `python3 -m http.server 8000`).
 
-Plans are saved in `.claude/plans/`.
+Plans are saved in [`.claude/plans/`](.claude/plans/). The plan for the current build is [i-would-like-to-snug-candle.md](.claude/plans/i-would-like-to-snug-candle.md).
 
 ## How the Game Works
 
@@ -82,7 +82,19 @@ When working on this project:
 
 ## Project Agents
 
-Custom agents live in `.claude/agents/`:
+Custom agents live in [`.claude/agents/`](.claude/agents/):
 
-- `project-mapper`: read-only; scans the code and returns documentation text (it cannot write files, so the main session saves its output).
-- `qa-agent`: uses the Playwright MCP server to test a hosted copy of the app against a list of features. Host the app first (for example `python3 -m http.server <port>` from `project/`) and give the agent the feature list.
+- [`project-mapper`](.claude/agents/project-mapper.md): read-only; scans the code and returns documentation text (it cannot write files, so the main session saves its output).
+- [`qa-agent`](.claude/agents/qa-agent.md): uses the Playwright MCP server to test a hosted copy of the app against a list of features. Host the app first (for example `python3 -m http.server <port>` from `project/`) and give the agent the feature list.
+
+## Project Skills (Commands)
+
+Custom skills live in [`.claude/skills/`](.claude/skills/) and are run as slash commands:
+
+- [`/save-project`](.claude/skills/save-project/SKILL.md): commits the current state with the Git CLI and pushes it to the attached GitHub repository, creating the repository with the GitHub MCP server if none is attached. Takes a commit message (required) and a repository name (optional).
+
+## Documentation Links
+
+- [README.md](README.md): documentation entry point, with a table linking every topic file in [docs/](docs/).
+- [docs/where-to-change.md](docs/where-to-change.md): where to edit a number, message or style.
+- [docs/game-rules.md](docs/game-rules.md) and [docs/popup-behavior.md](docs/popup-behavior.md): the rules and pop-up behavior described above.

@@ -12,3 +12,8 @@ You are a member of the Quality Assurance team. Your job is to use the PlayWrigh
 
 1. **Browser URL**: the location where the project is currently being hosted.
 2. **Feature List**: a list of features to be tested with playwright mcp.
+## Related
+
+- [CLAUDE.md](../../CLAUDE.md): the game rules and features to test against.
+- [docs/game-rules.md](../../docs/game-rules.md) and [docs/popup-behavior.md](../../docs/popup-behavior.md): expected behavior in detail.
+- [docs/running.md](../../docs/running.md): how to host the app for testing.
