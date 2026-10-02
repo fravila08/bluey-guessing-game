@@ -92,6 +92,7 @@ Custom agents live in [`.claude/agents/`](.claude/agents/):
 Custom skills live in [`.claude/skills/`](.claude/skills/) and are run as slash commands:
 
 - [`/save-project`](.claude/skills/save-project/SKILL.md): commits the current state with the Git CLI and pushes it to the attached GitHub repository, creating the repository with the GitHub MCP server if none is attached. Takes a commit message (required) and a repository name (optional).
+- [`/grab-project`](.claude/skills/grab-project/SKILL.md): pulls the latest commit from GitHub onto this machine with the Git CLI, confirming a given URL with the GitHub MCP server first. Takes a GitHub HTTPS URL (optional, only when downloading a new project); with no URL it pulls from the existing remote.
 
 ## Documentation Links
 
